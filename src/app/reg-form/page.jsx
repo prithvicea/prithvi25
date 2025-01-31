@@ -1,9 +1,10 @@
 import React from "react";
+import FormFile from "./form";
 
 function page() {
   return (
-    <div className="flex w-screen h-screen flex-row justify-around items-center">
-      <div className="flex flex-col w-[40%] h-fit rounded-xl bg-[#D9D9D9]">
+    <div className="flex w-screen h-screen flex-col md:flex-row justify-around items-center">
+      <div className="flex flex-col w-[80%] my-10 md:w-[40%] h-fit rounded-xl bg-[#D9D9D9]">
         <h1 className="flex bg-[#D9D9D9] rounded-t-xl drop-shadow-xl px-5 py-2 text-[30px] itim-regular text-[#464646] ">
           Guidelines
         </h1>
@@ -50,8 +51,11 @@ function page() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col w-[50%] h-40 rounded-xl bg-amber-300">
-        hi
+      <div className="flex flex-col w-[80%] my-10 md:w-[50%] h-fit rounded-xl bg-[#D9D9D9] ">
+        <h1 className="flex w-full bg-[#D9D9D9] rounded-t-xl drop-shadow-xl px-5 py-2 text-[30px] itim-regular text-[#464646] ">
+          Registration Form
+        </h1>
+        <FormFile />
       </div>
     </div>
   );
