@@ -1,0 +1,85 @@
+.svgContainer {
+    position: relative;
+    width: 100%;
+    height: 230vh;
+    z-index: 2;
+    top: -25vh;
+}
+
+.backgroundSvg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: url("/Group 51.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    /* Background */
+}
+
+.overlayImage {
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    
+    z-index: 2;
+    mix-blend-mode: multiply;
+    /* Mask the noisy background with the curved SVG */
+    -webkit-mask-image: url("/Group 51.svg");
+    mask-image: url("/Group 51.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+
+.rightText {
+    width: 100%;
+    margin-top: 2rem; /* Equivalent to mt-8 */
+    color: white;
+  }
+  
+  @media (min-width: 768px) {
+    .rightText {
+      width: 50%; /* Equivalent to md:w-1/2 */
+      margin-top: 0; /* Equivalent to md:mt-0 */
+    }
+  }
+  
+  .heading {
+    padding-top: 15vh;
+    font-size: 1.5rem; /* Equivalent to text-2xl */
+    font-weight: 600; /* Equivalent to font-semibold */
+    margin-bottom: 1rem; /* Equivalent to mb-4 */
+  }
+  
+  .description {
+    padding-top: 5vh;
+    font-size: 1.125rem; /* Equivalent to text-lg */
+    margin-bottom: 1.5rem; /* Equivalent to mb-6 */
+    line-height: 1.625; /* Equivalent to leading-relaxed */
+    width: 90vh;
+  }
+  
+  .logoContainer {
+    display: flex;
+    gap: 1rem; /* Equivalent to space-x-4 */
+  }
+  
+  .logo {
+    height: 2.5rem; /* Equivalent to h-10 */
+    width: auto;
+    filter: invert(1);
+  }
+  

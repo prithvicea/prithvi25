@@ -4,7 +4,7 @@ const Sponsers = () => {
   return (
     <>
       <div
-        className="absolute top-[180vh] w-screen h-screen bg-[#D84A4A] bg-blend-soft-light bg-center bg-no-repeat bg-cover z-10 p-8 flex flex-col justify-center items-center gap-8"
+        className="absolute top-[145vh] w-screen h-[220vh] bg-[#D84A4A] bg-blend-soft-light bg-center bg-no-repeat bg-cover z-1 p-8 flex flex-col justify-center items-center gap-8"
         style={{
           backgroundImage: "url('./noisy-background.svg')",
         }}
@@ -17,18 +17,18 @@ const Sponsers = () => {
             borderWidth: "2px",
             borderRadius: "10px",
             gap: "6px",
-            boxShadow: "8px 8px 16px rgba(0, 0, 0, 1)",
+            boxShadow: "8px 8px 0px rgba(0, 0, 0, 1)",
           }}
         >
           OUR SPONSERS
         </div>
 
-        <div className="flex justify-center items-center mt-20 mb-30 gap-12">
+        <div className="flex justify-between items-center mt-20 mb-30 gap-12">
         
           <div
             style={{
-              width: "248px",
-              height: "248px",
+              width: "200px",
+              height: "200px",
               borderWidth: "4px",
             }}
             className="bg-[#D9D9D9] rounded-full border-black border-4 translate-y-26"
@@ -37,8 +37,8 @@ const Sponsers = () => {
      
           <div
             style={{
-              width: "248px",
-              height: "248px",
+              width: "200px",
+              height: "200px",
               borderWidth: "4px",
             }}
             className="bg-[#D9D9D9] rounded-full border-black border-4"
@@ -46,8 +46,8 @@ const Sponsers = () => {
 
           <div
             style={{
-              width: "248px",
-              height: "248px",
+              width: "200px",
+              height: "200px",
               borderWidth: "4px",
             }}
             className="bg-[#D9D9D9] rounded-full border-black border-4 translate-y-26"
@@ -55,8 +55,8 @@ const Sponsers = () => {
 
           <div
             style={{
-              width: "248px",
-              height: "248px",
+              width: "200px",
+              height: "200px",
               borderWidth: "4px",
             }}
             className="bg-[#D9D9D9] rounded-full border-black border-4"
