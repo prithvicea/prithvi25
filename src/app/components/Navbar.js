@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import Link from "next/link";
-import styles from "./Navbar.module.css";
+
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -52,7 +52,7 @@ const Navbar = () => {
 
     return (
         <nav
-            className="top-0 bg-[#FCA24B] bg-blend-soft-light p-0 bg-cover bg-center bg-no-repeat border-b-2  border-[#003434]"
+            className="top-0 bg-[#FCA24B] w-screen bg-blend-soft-light p-0 bg-cover bg-center bg-no-repeat border-b-2  border-[#003434]"
             style={{
                 backgroundImage: "url('./noisy-background.svg')",
                 fontFamily: "Itim, serif",
