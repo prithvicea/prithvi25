@@ -9,6 +9,11 @@ const Sponsers = () => {
           backgroundImage: "url('./noisy-background.svg')",
         }}
       >
+      </div>
+      <div
+        className="absolute top-[145vh] w-screen h-[220vh]  bg-blend-soft-light bg-center bg-no-repeat bg-cover z-100 p-8 flex flex-col justify-center items-center gap-8"
+        s
+      >
         <div
           className="border-2 rounded-lg py-1 px-4 bg-[#D9D9D9] flex justify-center items-center shadow-lg"
           style={{

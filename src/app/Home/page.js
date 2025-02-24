@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import RandomBackground from "../components/Randombackground";
+import RandomBackground from "../components/Random";
 import Navbar from "../components/Navbar";
 import About from '../components/About';
 import Sponsers from '../components/Sponsers';
