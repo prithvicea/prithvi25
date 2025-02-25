@@ -20,11 +20,11 @@ const CenteredWorkshopCarousel = () => {
       <Splide
         options={{
           type: "loop",
-          perPage: 3,
+          perPage: 2,
           focus: "center",
           gap: "1.5rem",
           autoplay: true,
-          interval: 2500,
+          interval: 1500,
           speed: 1000,
           arrows: false,
           pagination: true,
@@ -44,7 +44,7 @@ const CenteredWorkshopCarousel = () => {
 
             {/* Slide Box with Background Image */}
             <div
-              className="relative h-56 md:h-64 w-full flex flex-col items-center justify-center rounded-xl shadow-md p-6 border-2 border-gray-950 transition-transform duration-500 splide__slide bg-cover bg-center"
+              className="relative h-80 md:h-80 w-full flex flex-col items-center justify-center rounded-xl shadow-md p-6 border-2 border-gray-950 transition-transform duration-500 splide__slide bg-cover bg-center"
               style={{ backgroundImage: `url(${workshop.image})` }}
             >
               {/* Overlay */}

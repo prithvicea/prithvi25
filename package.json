@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "@tailwindcss/postcss": "^4.0.0",
     "autoprefixer": "^10.4.20",
