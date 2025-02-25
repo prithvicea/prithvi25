@@ -14,6 +14,7 @@ export default {
         fontFamily: {
           poppins: ["Poppins", "serif"],
           Itim: ["Itim", "serif"],
+          rusoile: ['"Rusoile Demo"', 'sans-serif']
         },
       },
     },
