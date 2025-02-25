@@ -22,13 +22,13 @@ export default function Home() {
           fontFamily: "Itim, serif",
         }}
       >
-        <Navbar />
+    
         <RandomBackground />
         <About />
         <Sponsers />
         <Workshops />
         <Lecture />
-    
+        <Footer />
         
 
         
