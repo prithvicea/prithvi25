@@ -1,0 +1,79 @@
+.title{
+    margin-bottom: 15vw;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-blend-mode: soft-light;
+    background-color: #FCA24B;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+  
+  .contentWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 2;
+  }
+  
+  .presentsText {
+    font-family: "Rusoile Demo", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 49.6px;
+    text-align: center;
+  }
+  
+  .title {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .floatingElement {
+    position: absolute;
+    pointer-events: none;
+    will-change: transform;
+  }
+  
+  .star {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+  }
+  
+  .circle {
+    opacity: 0.8;
+  }
+  
+  .globe, .globr {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+  }
+  
+  @media (max-width: 768px) {
+    .presentsText {
+      font-size: 24px;
+      line-height: 37.2px;
+    }
+  
+    .title {
+      width: 90vw;
+      height: auto;
+    }
+  }
+
+  .prithvi{
+    font-size: 10rem;
+    font-family: the rivened;
+  }
