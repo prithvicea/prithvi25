@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../styles/About.module.css"
+import styles from "../styles/About.module.css";
 
 const About = () => {
   return (
@@ -38,12 +38,12 @@ const About = () => {
           />
         </div>
 
-        <div className="relative z-30 container mx-auto px-4 py-12 flex flex-wrap items-center justify-between top-15">
-          <div className="w-full md:w-1/2 flex items-center justify-center">
-            <div className="relative w-48 h-60">
-              <div className="absolute w-48 h-55 bg-white rounded-2xl border-4 border-black shadow-lg top-40 left-[-140px] z-0"></div>
-              <div className="absolute w-48 h-55 bg-white rounded-2xl border-4 border-black shadow-lg z-10"></div>
-              <div className="absolute w-48 h-55 bg-white rounded-2xl border-4 border-black shadow-lg top-35 left-25 z-20"></div>
+        <div className={`relative z-30 container mx-auto px-4 py-12 flex flex-wrap items-center justify-between top-15`}>
+          <div className={`${styles.container} w-full md:w-1/2 flex items-center justify-center`}>
+            <div className={`${styles.boxes} relative w-48 h-60`}>
+              <div className={`${styles.box1} absolute w-48 h-55 bg-white rounded-2xl border-4 border-black shadow-lg top-40 left-[-140px] z-0`}></div>
+              <div className={`${styles.box2} absolute w-48 h-55 bg-white rounded-2xl border-4 border-black shadow-lg z-10`}></div>
+              <div className={`${styles.box3} absolute w-48 h-55 bg-white rounded-2xl border-4 border-black shadow-lg top-35 left-25 z-20`}></div>
             </div>
           </div>
 
@@ -76,10 +76,9 @@ const About = () => {
             </div>
           </div>
         </div>
-
       </div>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

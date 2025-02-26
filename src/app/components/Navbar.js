@@ -99,7 +99,7 @@ const Navbar = () => {
                 </div>
 
                 <div className={styles.globe}>
-                    <Image src="/globe.svg" alt="globe svg" width={40} height={40} />
+                    {/* <Image src="/globe.svg" alt="globe svg" width={40} height={40} /> */}
                 </div>
                 <div className={styles.star}>
                     <Image src="/star.svg" alt="star svg" width={10} height={10} />
@@ -169,6 +169,7 @@ const Navbar = () => {
                     </div>
                 </div>
             )}
+            
         </nav>
     );
 };

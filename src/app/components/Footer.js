@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaEnvelope, FaFacebook, FaLinkedin } from "react-icons/fa";
@@ -5,7 +6,7 @@ import { FaInstagram, FaEnvelope, FaFacebook, FaLinkedin } from "react-icons/fa"
 export default function Home() {
   return (
     <div
-    className="absolute top-[170vh] h-auto w-screen flex flex-col items-center justify-center text-black font-itim z-20 mt-[30px]"
+    className="container absolute top-[170vh] h-auto w-screen flex flex-col items-center justify-center text-black font-itim z-20 mt-[30px]"
 style={{
   position: "relative",
   isolation: "isolate",
@@ -81,6 +82,12 @@ style={{
       <div className="text-black mt-[40px] z-2 mb-[40px] text-[18px] md:text-[20px] text-center">
         <p>CIVIL ENGINEERING ASSOCIATION, CED, NIT CALICUT</p>
       </div>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .container{
+          top:250vh;
+          }
+      `}</style>
     </div>
   );
 }

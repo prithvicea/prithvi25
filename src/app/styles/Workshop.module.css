@@ -1,0 +1,23 @@
+.workshopsBackground {
+
+    background-image: url('/noisy-background.svg'), url('/v.svg');
+    background-size: cover, cover; /* Ensure both images cover the container */
+    background-position: center, center;
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-blend-mode: multiply;
+    -webkit-mask-image: url('/v.svg');
+    mask-image: url('/v.svg');
+    -webkit-mask-size: cover; /* Ensure the mask covers the container */
+    mask-size: cover;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
+  
+  /* Mobile-specific styles */
+  @media (max-width: 768px) {
+    .workshopsBackground {
+      top: 280vh; /* Adjust top position for mobile */
+      min-height: 120vh; /* Increase height for better mobile view */
+      background-size: cover, cover; /* Ensure both images cover the container */
+    }
+  }
