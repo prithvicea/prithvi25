@@ -26,7 +26,7 @@ export default function Workshop() {
   return (
     <>
       <div
-        className="min-h-screen bg-slate-500 py-4"
+        className="min-h-screen bg-slate-500 py-4 pt-25"
         style={{
           backgroundImage:
             "linear-gradient(rgba(255, 0, 135, 0.57), rgba(255, 0, 135, 0.57)), url('./noisy-background.svg')",

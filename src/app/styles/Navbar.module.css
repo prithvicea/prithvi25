@@ -2,10 +2,10 @@
 
 /* Navbar.module.css */
 .navbar {
-    position: relative;
+    position: absolute;
     top: 0;
     width: 100%;
-    background-color: #FCA24B;
+    /* background-color: #FCA24B; */
     background-blend-mode: soft-light;
     padding: 0;
     background-size: cover;
@@ -195,7 +195,7 @@
 
 .navbar {
     top: 0;
-    background-color: #FCA24B;
+    /* background-color: #FCA24B; */
     width: 100vw;
     background-blend-mode: soft-light;
     padding: 0;

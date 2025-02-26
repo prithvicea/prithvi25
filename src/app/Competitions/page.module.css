@@ -216,19 +216,37 @@
     background-color: #23A323;
     background-blend-mode: soft-light;
     padding-top: 8rem;
-    padding-bottom: 12rem;
+    padding-bottom: 11rem;
     background-image: url('/noisy-background.svg');
 }
   
   @media (max-width: 1024px) {
     .competitionsGrid {
       grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
     }
   }
   
   @media (max-width: 768px) {
     .competitionsGrid {
       grid-template-columns: repeat(1, 1fr);
+      justify-content: center;
     }
+    .reviewCard {
+        position: relative;
+        height: 12rem;
+        width: 20rem;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 0.75rem;
+        padding: 2rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.8);
+        margin-right: 1rem;
+      }
+      .title{
+        width: 12rem;
+    height: 2.5rem;
+      }
   }
   

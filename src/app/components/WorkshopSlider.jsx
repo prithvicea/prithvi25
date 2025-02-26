@@ -15,7 +15,7 @@ const workshops = [
 
 const CenteredWorkshopCarousel = () => {
   return (
-    <div className="w-full flex flex-col items-center py-8 min-h-screen relative z-3 bg-transparent">
+    <div className="w-full flex flex-col items-center py-8 relative z-3 bg-transparent">
       {/* Workshop Slider */}
       {/* <div className="mb-5 text-white text-1.2rem font-semibold">Workshops</div> */}
 
@@ -64,35 +64,47 @@ const CenteredWorkshopCarousel = () => {
       </Splide>
 
       {/* Custom Pagination Section */}
-      <div className="absolute bottom-8 md:bottom-10 flex justify-center w-full">
-        <style>{`
-          .splide__slide {
-            transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
-            opacity: 0.7;
-          }
-          .splide__slide.is-active {
-            transform: scale(1.05);
-            opacity: 1;
-          }
-          .splide__pagination {
-            display: flex;
-            justify-content: center;
-            gap: 44px;
-            position: relative;
-            bottom: -50px;
-          }
-          .splide__pagination__page {
-            width: 80px;
-            height: 50px;
-            border-radius: 5px;
-            background-color: white;
-            transition: all 0.3s ease;
-          }
-          .splide__pagination__page.is-active {
-            border: 2px solid black;
-            width: 80px;
-          }
-        `}</style>
+      <div className="absolute bottom-2 md:bottom-0 flex justify-center w-full">
+      <style>{`
+  .splide__slide {
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    opacity: 0.7;
+  }
+  .splide__slide.is-active {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  .splide__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 44px;
+    position: absolute;
+    bottom: -30px; /* Adjust bottom spacing */
+  }
+  .splide__pagination__page {
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  .splide__pagination__page.is-active {
+    border: 2px solid black;
+    width: 80px;
+  }
+  /* Hide pagination on mobile */
+  @media (max-width: 768px) {
+    .splide__pagination {
+      display: none;
+    }
+  }
+  /* Fix extra spacing issue in mobile */
+  @media (max-width: 768px) {
+    .splide {
+      padding-bottom: 0 !important; /* Removes extra space */
+    }
+  }
+`}</style>
       </div>
     </div>
   );

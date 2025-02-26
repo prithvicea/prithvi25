@@ -46,7 +46,7 @@ const Navbar = () => {
     }, [menuOpen]);
 
     return (
-        <nav className={styles.navbar} style={{ backgroundImage: "url('./noisy-background.svg')" }}>
+        <nav className={styles.navbar} >
             <div className={styles.container}>
                 <div className={styles.logoSection}>
                     <Image
