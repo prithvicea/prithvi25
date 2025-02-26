@@ -32,7 +32,7 @@ function WorkshopCard({
           <p className="text-xl itim-regular text-wrap">
             Registration fee- <br />₹{workshopFee}/-
           </p>
-          <button className="text-[#0E8700] text-xl border-2 h-fit px-6 itim-regular bg-[#B1CFFF] border-black rounded-md">
+          <button className="text-[#0E8700] text-xl border-2 h-fit px-6 itim-regular bg-[#B1CFFF] border-black rounded-md hover:cursor-pointer hover:bg-[#93beff] hover:text-[#447a3e] ">
             Register
           </button>
         </div>
