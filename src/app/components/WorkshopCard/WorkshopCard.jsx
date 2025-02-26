@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -31,7 +31,7 @@ function WorkshopCard({
             alt="workshop"
           />
         </div>
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between items-center">
           <p className="text-xl itim-regular text-wrap">
             Registration fee- <br />₹{workshopFee}/-
           </p>

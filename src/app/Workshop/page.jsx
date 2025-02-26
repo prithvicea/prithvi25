@@ -10,7 +10,7 @@ function Workshop() {
   const workshopData = WorkshopData;
   return (
     <div
-      className="flex flex-col w-screen  "
+      className="flex flex-col w-screen"
       style={{
         backgroundImage: `linear-gradient(rgba(30, 80, 255, 0.57), rgba(30, 80, 255, 0.57)), url('./noisy-background.svg')`,
       }}
