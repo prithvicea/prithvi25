@@ -1,3 +1,5 @@
+"use client"
+import { useRouter } from "next/navigation";
 import React from "react";
 
 function WorkshopCard({
@@ -7,6 +9,7 @@ function WorkshopCard({
   facultyImage,
   workshopImage,
 }) {
+  const router = useRouter();
   return (
     <div className="flex flex-col lg:flex-row w-fit mx-5 lg:mx-0 lg:w-1/2 h-fit lg:m-0 bg-[#D9D9D9] rounded-2xl justify-center items-center border-2 border-black">
       <div className="flex-col p-5 w-fit lg:w-1/3 h-fit place-items-center ">
@@ -32,7 +35,10 @@ function WorkshopCard({
           <p className="text-xl itim-regular text-wrap">
             Registration fee- <br />₹{workshopFee}/-
           </p>
-          <button className="text-[#0E8700] text-xl border-2 h-fit px-6 itim-regular bg-[#B1CFFF] border-black rounded-md hover:cursor-pointer hover:bg-[#93beff] hover:text-[#447a3e] ">
+          <button
+            className="text-[#0E8700] text-xl border-2 h-fit px-6 itim-regular bg-[#B1CFFF] border-black rounded-md hover:cursor-pointer hover:bg-[#93beff] hover:text-[#447a3e] "
+            onClick={() => router.push("/Register")}
+          >
             Register
           </button>
         </div>

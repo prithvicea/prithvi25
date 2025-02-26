@@ -15,7 +15,7 @@ const workshops = [
 
 const CenteredWorkshopCarousel = () => {
   return (
-    <div className="w-full flex flex-col items-center py-50 min-h-screen relative z-3 bg-transparent">
+    <div className="w-full flex flex-col items-center relative z-3 py-10">
       {/* Workshop Slider */}
       <Splide
         options={{
@@ -38,9 +38,14 @@ const CenteredWorkshopCarousel = () => {
         className="w-11/12 md:w-4/5 pb-16"
       >
         {workshops.map((workshop, index) => (
-          <SplideSlide key={index} className="relative flex flex-col items-center py-4 px-4">
+          <SplideSlide
+            key={index}
+            className="relative flex flex-col items-center py-4 px-4"
+          >
             {/* Title Above Each Box */}
-            <h2 className="text-black font-semibold text-lg md:text-xl mb-3 text-center">{workshop.title}</h2>
+            <h2 className="text-black font-semibold text-lg md:text-xl mb-3 text-center">
+              {workshop.title}
+            </h2>
 
             {/* Slide Box with Background Image */}
             <div
