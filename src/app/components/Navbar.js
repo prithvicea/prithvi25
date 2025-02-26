@@ -92,6 +92,9 @@ const Navbar = () => {
                         <li className={styles.navItem}>
                             <Link href="/Competitions">Competitions</Link>
                         </li>
+                        <li className={styles.navItem}>
+                            <Link href="/Team">Team</Link>
+                        </li>
                     </ul>
                 </div>
 
@@ -146,7 +149,7 @@ const Navbar = () => {
                             <div className={styles.contactButton}>
                                 <button className={styles.button}>
                                     <span className={styles.buttonInner}></span>
-                                    <span className={styles.buttonText}>Contact Us</span>
+                                    <span className={styles.buttonText}><Link href="/Competitions">Contact Us</Link></span>
                                 </button>
                             </div>
                         </li>
