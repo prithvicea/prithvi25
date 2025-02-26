@@ -15,7 +15,7 @@ const workshops = [
 
 const CenteredWorkshopCarousel = () => {
   return (
-    <div className="w-full flex flex-col items-center py-10 min-h-screen relative z-3 bg-transparent">
+    <div className="w-full flex flex-col items-center py-8 min-h-screen relative z-3 bg-transparent">
       {/* Workshop Slider */}
       {/* <div className="mb-5 text-white text-1.2rem font-semibold">Workshops</div> */}
 
@@ -77,20 +77,20 @@ const CenteredWorkshopCarousel = () => {
           .splide__pagination {
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 44px;
             position: relative;
             bottom: -50px;
           }
           .splide__pagination__page {
-            width: 32px;
-            height: 22px;
+            width: 80px;
+            height: 50px;
             border-radius: 5px;
             background-color: white;
             transition: all 0.3s ease;
           }
           .splide__pagination__page.is-active {
             border: 2px solid black;
-            width: 30px;
+            width: 80px;
           }
         `}</style>
       </div>

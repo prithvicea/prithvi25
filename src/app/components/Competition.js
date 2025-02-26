@@ -4,7 +4,7 @@ const Competition = () => {
   return (
     <>
       <div
-        className="absolute top-[370vh] w-screen  bg-[#23A323] bg-blend-soft-light bg-center bg-no-repeat bg-cover z-1 p-8 flex flex-col justify-center items-center gap-8"
+        className="absolute top-[330vh] h-[200vh] w-screen bg-[#23A323] bg-blend-soft-light bg-center bg-no-repeat bg-cover z-1 p-8 flex flex-col justify-center items-center gap-8 "
         style={{
           backgroundImage: "url('./noisy-background.svg')",
         }}

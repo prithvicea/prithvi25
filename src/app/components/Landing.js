@@ -1,52 +1,31 @@
-<div className="flex flex-col items-center justify-center mt-[180px]">
-  <div
-    style={{
-      width: "46.5px",
-      height: "55px",
-    }}
-  >
-    <Image
-      src="./Group 24.svg"
-      alt="logo"
-      width={46.5}
-      height={55}
-    />
-  </div>
+// Updated Header.jsx
+import Image from "next/image";
+import styles from './Landing.module.css';
 
-  <div
-    style={{
-      width: "553px",
-      height: "50px",
-    }}
-  >
-    <div
-      style={{
-        fontFamily: "Rusoile Demo",
-        fontWeight: "400",
-        fontSize: "32px",
-        lineHeight: "49.6px",
-        letterSpacing: "0%",
-        textAlign: "center",
-      }}
-      className="font-rusoile"
-    >
-      CiviL Engineering association presents
+const Header = () => {
+  return (
+    <div className={styles.container}>
+      <div className={styles.logoWrapper}>
+        {/* Use absolute path with public folder reference */}
+        <Image
+          src="/Group 24.svg" // Add leading slash to reference from public directory
+          alt="logo"
+          width={46.5}
+          height={55}
+          className={styles.logo}
+          priority // Add priority to load the image sooner
+        />
+      </div>
+      <div className={styles.associationWrapper}>
+        <div className={`${styles.associationText} font-rusoile`}>
+          CiviL Engineering association presents
+        </div>
+      </div>
+      <div className={styles.titleWrapper}>
+        <p className={styles.prithvi}>PRITHVI'25</p>
+      </div>
     </div>
-  </div>
+  );
+};
 
-  <div
-    style={{
-      width: "656px",
-      height: "172px",
-    }}
-  >
-    <p className={styles.prithvi}>PRITHVI'25</p>
-    {/* <Image
-      className={styles.title}
-      src="./title.svg"
-      alt="Prithvi title"
-      width={656}
-      height={172}
-    /> */}
-  </div>
-</div>
+export default Header;
