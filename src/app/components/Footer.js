@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaEnvelope, FaFacebook, FaLinkedin } from "react-icons/fa";
 
-export default function Home() {
+export default function Footer() {
   return (
     <div
       className="absolute top-[540vh]  w-screen bg-cover bg-center flex flex-col items-center justify-center bg-green-500 font-itim z-1 mt-0"
