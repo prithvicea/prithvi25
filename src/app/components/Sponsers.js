@@ -8,12 +8,11 @@ const Sponsers = () => {
         style={{
           backgroundImage: "url('./noisy-background.svg')",
         }}
-      >
-      </div>
+      ></div>
       <div
-        className="absolute top-[145vh] w-screen h-[220vh]  bg-blend-soft-light bg-center bg-no-repeat bg-cover z-100 p-8 flex flex-col justify-center items-center gap-8"
-        s
+        className="absolute top-[145vh] w-screen h-[220vh] bg-blend-soft-light bg-center bg-no-repeat bg-cover z-100 p-8 flex flex-col justify-center items-center gap-8"
       >
+        {/* Title */}
         <div
           className="border-2 rounded-lg py-1 px-4 bg-[#D9D9D9] flex justify-center items-center shadow-lg"
           style={{
@@ -28,71 +27,61 @@ const Sponsers = () => {
           OUR SPONSERS
         </div>
 
-        <div className="flex justify-between items-center mt-20 mb-30 gap-12">
-        
+        {/* Sponsors Grid */}
+        <div className="flex flex-wrap justify-center items-center mt-20 mb-30 gap-8 md:gap-12">
+          {/* Sponsor Circle 1 */}
           <div
             style={{
-              width: "200px",
-              height: "200px",
+              width: "150px", // Smaller size for mobile
+              height: "150px", // Smaller size for mobile
               borderWidth: "4px",
             }}
-            className="bg-[#D9D9D9] rounded-full border-black border-4 translate-y-26"
+            className="bg-[#D9D9D9] rounded-full border-black border-4 translate-y-26 md:translate-y-26"
           ></div>
 
-     
+          {/* Sponsor Circle 2 */}
           <div
             style={{
-              width: "200px",
-              height: "200px",
+              width: "150px", // Smaller size for mobile
+              height: "150px", // Smaller size for mobile
               borderWidth: "4px",
             }}
             className="bg-[#D9D9D9] rounded-full border-black border-4"
           ></div>
 
+          {/* Sponsor Circle 3 */}
           <div
             style={{
-              width: "200px",
-              height: "200px",
+              width: "150px", // Smaller size for mobile
+              height: "150px", // Smaller size for mobile
               borderWidth: "4px",
             }}
-            className="bg-[#D9D9D9] rounded-full border-black border-4 translate-y-26"
+            className="bg-[#D9D9D9] rounded-full border-black border-4 translate-y-26 md:translate-y-26"
           ></div>
 
+          {/* Sponsor Circle 4 */}
           <div
             style={{
-              width: "200px",
-              height: "200px",
+              width: "150px", // Smaller size for mobile
+              height: "150px", // Smaller size for mobile
               borderWidth: "4px",
             }}
             className="bg-[#D9D9D9] rounded-full border-black border-4"
           ></div>
         </div>
-        {/*
-                    <div className="flex justify-center items-center gap-8 flex-wrap">
-          {sponsorsData.map((sponsor, index) => (
-            <div
-              key={index}
-              className={`bg-[#D9D9D9] rounded-full border-black border-4 flex justify-center items-center overflow-hidden ${
-                index % 2 !== 0 ? "translate-y-26" : ""
-              }`}
-              style={{
-                width: "248px",
-                height: "248px",
-                borderWidth: "4px",
-              }}
-            >
-              <Image
-                src={sponsor.image}
-                alt={`Sponsor ${index + 1}`}
-                width={248}
-                height={248}
-                className="rounded-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
-        
-        */}
+
+        {/* Optional: Responsive Styles */}
+        <style>{`
+          @media (max-width: 768px) {
+            .sponsors-grid {
+              gap: 1rem; /* Reduce gap between sponsor circles for mobile */
+            }
+            .sponsor-circle {
+              width: 120px; /* Further reduce size for smaller mobile screens */
+              height: 120px; /* Further reduce size for smaller mobile screens */
+            }
+          }
+        `}</style>
       </div>
     </>
   );

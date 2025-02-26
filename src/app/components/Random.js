@@ -141,20 +141,27 @@ const RandomBackground = () => {
         fontFamily: "Itim, serif",
       }}
     >
-      {/* Content Wrapper */}
-      <div className={styles.contentWrapper}>
-        <div className="logo-container">
-          <Image src="/Prithvi.svg" alt="logo" width={46.5} height={50} />
-        </div>
-        <div className="presents-text">
-          <div className={styles.presentsText}>
-            Civil Engineering Association presents
-          </div>
-        </div>
-        <div className="title-container">
-          <p className={styles.prithvi}>PRITHVI'25</p>
-        </div>
-      </div>
+      {/* Content Wrapper */} {/* Content Wrapper */}
+<div className={styles.contentWrapper}>
+  <div className="logo-container">
+    <Image
+      src="/Prithvi.svg"
+      alt="logo"
+      width={46.5}
+      height={50}
+      className="w-8 h-8 md:w-12 md:h-12" // Adjusted logo size for mobile
+      style={{ width: '2rem', height: '2rem' }} // Force size for debugging
+    />
+  </div>
+  <div className="presents-text">
+    <div className={`${styles.presentsText} text-xs md:text-base`}>
+      Civil Engineering Association presents
+    </div>
+  </div>
+  <div className="title-container">
+    <p className={`${styles.prithvi} text-2xl md:text-5xl`}>PRITHVI'25</p>
+  </div>
+</div>
 
       {/* Floating Elements */}
       {positions.map((pos, index) => (
