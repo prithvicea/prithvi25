@@ -4,8 +4,9 @@ import Navbar from "../components/Navbar";
 import About from '../components/About';
 import Sponsers from '../components/Sponsers';
 import Workshops from '../components/Workshops';
-import Lecture from '../components/Lecture';
+import Lecture from '../components/Competition';
 import Footer from '../components/Footer';
+import Competition from '../components/Competition';
 
 
 
@@ -27,8 +28,9 @@ export default function Home() {
         <About />
         <Sponsers />
         <Workshops />
-        <Lecture />
-        <Footer />
+        <Competition />
+        <Footer/>
+    
         
 
         

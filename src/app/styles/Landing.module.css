@@ -1,0 +1,105 @@
+/* Header.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 180px;
+    width: 100%;
+    padding: 0 16px;
+  }
+  
+  .logoWrapper {
+    width: 46.5px;
+    height: 55px;
+    margin-bottom: 16px;
+  }
+  
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+  
+  .associationWrapper {
+    width: 100%;
+    max-width: 553px;
+    height: auto;
+    margin-bottom: 16px;
+  }
+  
+  .associationText {
+    font-family: "Rusoile Demo", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 49.6px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  
+  .titleWrapper {
+    width: 100%;
+    max-width: 656px;
+    height: auto;
+  }
+  
+  .prithvi {
+    /* Add your existing styles for the prithvi class here */
+    font-size: 120px;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: bold;
+    /* Add any other existing styles you already have */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .container {
+      margin-top: 120px;
+    }
+    
+    .logoWrapper {
+      width: 40px;
+      height: 47px;
+    }
+    
+    .associationText {
+      font-size: 24px;
+      line-height: 37px;
+    }
+    
+    .prithvi {
+      font-size: 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      margin-top: 80px;
+    }
+    
+    .logoWrapper {
+      width: 35px;
+      height: 41px;
+    }
+    
+    .associationText {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    
+    .prithvi {
+      font-size: 30px;
+    }
+  }
+  
+  /* For very small screens */
+  @media (max-width: 320px) {
+    .associationText {
+      font-size: 16px;
+      line-height: 25px;
+    }
+    
+    .prithvi {
+      font-size: 48px;
+    }
+  }
