@@ -1,5 +1,6 @@
 import Image from "next/image";
 import WorkshopSlider from "../components/WorkshopSlider";
+import WorkshopCard from "../components/WorkshopCard/WorkshopCard";
 
 const Workshops = () => {
   return (
@@ -13,7 +14,7 @@ const Workshops = () => {
 
         <WorkshopSlider/>
         <hr className="w-[45%] h-1  bg-white border-0 rounded-sm dark:bg-white"></hr>
-
+        <WorkshopCard/>
       </div>
 
     </>
