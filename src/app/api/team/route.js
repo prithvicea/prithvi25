@@ -24,7 +24,7 @@ export async function GET() {
   
       const response = await sheets.spreadsheets.values.get({
         spreadsheetId: process.env.GOOGLE_SHEET_ID,
-        range: "A1:F1000", // Adjust range based on your data
+        range: "A1:F1", 
       });
   
       const rows = response.data.values;

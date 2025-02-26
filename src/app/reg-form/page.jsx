@@ -1,7 +1,11 @@
+'use client'
 import React from "react";
+import { useSearchParams } from "next/navigation";
 import FormFile from "./form";
 
 function page() {
+  const searchParams = useSearchParams();
+  const topic = searchParams.get("topic") || "Default Topic";
   return (
     <div className="flex w-screen h-full lg:h-screen overflow-hidden flex-col my-10 lg:my-0 gap-10 lg:gap-0 lg:flex-row justify-center lg:justify-around items-center">
       <div className="flex flex-col w-[80%] lg:w-[40%] h-fit rounded-xl bg-[#D9D9D9]">
@@ -15,8 +19,7 @@ function page() {
             </div>
             <div className="flex w-2/3 flex-col itim-regular me-5 my-5 p-1">
               <span className="text-xl md:text-[24px] pb-2">
-                AutoCAD Design <br />
-                Competition
+                {topic}
               </span>
               <span className="text-xl md:text-[24px] border-t-2 pt-2">
                 Contacts <br />
@@ -55,7 +58,8 @@ function page() {
         <h1 className="flex w-full bg-[#D9D9D9] rounded-t-xl drop-shadow-xl px-5 py-2 text-[30px] itim-regular text-[#464646] ">
           Registration Form
         </h1>
-        <FormFile />
+        <FormFile topic={topic} />
+
       </div>
     </div>
   );
