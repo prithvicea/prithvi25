@@ -37,10 +37,6 @@ const Navbar = () => {
                     { opacity: 1, scale: 1, duration: 0.5, ease: 'power2.out' }
                 );
             } else {
-<<<<<<< HEAD
-                // Reset the animation when the menu is closed
-=======
->>>>>>> 1bf7164f6487576e798885b7073eb3a952012b5b
                 gsap.to(menuRef.current, { opacity: 0, y: -50, duration: 0.5, ease: 'power2.in' });
                 itemsRef.current.forEach((item) => {
                     gsap.to(item, { opacity: 0, y: 30, duration: 0.3, ease: 'power2.in' });
