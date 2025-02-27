@@ -14,7 +14,7 @@ export const config = {
 
 export async function POST(request, { params }) {
   try {
-    const { topic } = await params;
+    const { topic } =params;
 
     if (!topic) {
       return NextResponse.json(
@@ -54,7 +54,7 @@ export async function POST(request, { params }) {
     const auth = new google.auth.GoogleAuth({
       credentials: {
         client_email: process.env.GOOGLE_CLIENT_EMAIL,
-        private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+        private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
       },
       scopes: [
         "https://www.googleapis.com/auth/drive",
