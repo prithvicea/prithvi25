@@ -116,6 +116,10 @@ export async function POST(request, { params }) {
 async function uploadImageToDrive(auth, filePath, fileName) {
   const drive = google.drive({ version: "v3", auth });
 
+  console.log("Drive Upload Path:", filePath);
+  console.log("Drive File Name:", fileName);
+  console.log("Drive Parent ID:", process.env.GOOGLE_DRIVE_ID);
+
   const fileMetadata = { name: fileName, parents: [process.env.GOOGLE_DRIVE_ID] };
   const media = {
     mimeType: "image/jpeg",
