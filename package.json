@@ -14,6 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@splidejs/react-splide": "^0.7.12",
+    "@tailwindcss/postcss": "^4.0.9",
     "axios": "^1.7.9",
     "formidable": "^3.5.2",
     "googleapi": "^1.0.2",
