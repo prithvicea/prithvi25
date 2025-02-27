@@ -6,7 +6,7 @@ import { FaInstagram, FaEnvelope, FaFacebook, FaLinkedin } from "react-icons/fa"
 export default function Home() {
   return (
     <div
-    className="container absolute top-[170vh] h-auto w-screen flex flex-col items-center justify-center text-black font-itim z-20 mt-[30px]"
+    className=" absolute top-[220vh] md:top-[170vh] h-auto w-screen flex flex-col items-center justify-center text-black font-itim z-20 mt-[30px]"
 style={{
   position: "relative",
   isolation: "isolate",

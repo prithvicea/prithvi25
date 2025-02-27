@@ -140,7 +140,7 @@ const Navbar = () => {
                             <Link href="/Lecture">Lecture</Link>
                         </li>
                         <li ref={(el) => (itemsRef.current[2] = el)} className={styles.navItem}>
-                            <Link href="/Workshop">Workshop</Link>
+                            <Link href="/Workshops">Workshop</Link>
                         </li>
                         <li ref={(el) => (itemsRef.current[3] = el)} className={styles.navItem}>
                             <Link href="/Competitions">Competitions</Link>

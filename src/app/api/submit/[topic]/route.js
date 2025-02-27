@@ -26,7 +26,12 @@ export async function POST(request, { params }) {
     let id;
     if (topic === "Lecture1") {
       id = process.env.GOOGLE_SHEET_ID;
-    } else {
+    }
+    
+    if (topic === "AutoCAD Design Competition") {
+      id = process.env.WORKSHOP_SHEET_ID;
+    }
+    else {
       id = process.env.GOOGLE_SHEET_ID2;
     }
 

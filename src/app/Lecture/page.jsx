@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import { FaInstagram, FaEnvelope, FaFacebook, FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
 
 const data = [
   {
@@ -45,7 +47,7 @@ export default function Workshop() {
             <div className="absolute top-[10%] left-[5%] md:top-[15%] md:left-[15%] w-[40%] md:w-[228px] h-[40%] md:h-[287px] bg-[#D9D9D9] border-4 border-black rounded-lg shadow-md"></div>
 
             {/* Top-right text */}
-            <div className="absolute top-[5%] right-[5%] md:top-[5%] md:right-[5%] w-[50%] md:w-[35%] text-right text-black text-sm md:text-base font-itim">
+            <div className="absolute top-[4%] right-[5%] md:top-[5%] md:right-[5%] w-[50%] md:w-[35%] text-right text-black text-sm md:text-base font-itim">
               <p className="text-lg md:text-3xl pl-4 md:pl-8">
                 Equip yourself with the skills to shape the future
               </p>
@@ -55,7 +57,7 @@ export default function Workshop() {
             <div className="absolute top-1/2 left-1/2 w-[40%] md:w-[228px] h-[40%] md:h-[287px] bg-[#D9D9D9] border-4 border-black rounded-lg shadow-md transform -translate-x-1/2 -translate-y-1/2"></div>
 
             {/* Bottom-left text */}
-            <div className="absolute bottom-[5%] left-[5%] md:bottom-[2%] md:left-[5%] w-[50%] md:w-[35%] text-left text-black text-sm md:text-base">
+            <div className="absolute bottom-[3%] left-[5%] md:bottom-[2%] md:left-[5%] w-[50%] md:w-[35%] text-left text-black text-sm md:text-base">
               <p className="text-lg md:text-3xl pr-4 md:pr-8">
                 Equip yourself with the skills to shape the future
               </p>
@@ -67,7 +69,6 @@ export default function Workshop() {
 
           <hr className="w-[80%] md:w-[45%] h-1 mx-auto my-4 bg-white border-0 rounded-sm md:my-10"></hr>
 
-          {/* Workshop Cards */}
           {data.map((item, index) => (
             <div
               key={index}
@@ -112,7 +113,88 @@ export default function Workshop() {
               <hr className="w-[80%] md:w-[45%] h-1 mx-auto my-4 bg-white border-0 rounded-sm md:my-10"></hr>
             </div>
           ))}
+          
         </div>
+        <div
+          className="absolute bottom-0 h-full w-screen flex flex-col items-center justify-center text-black font-itim z-20 mt-[90px]"
+          style={{
+            position: "relative",
+            isolation: "isolate",
+            overflow: "hidden"
+          }}
+
+        >
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: "url('/background.svg')",
+              backgroundSize: "auto 100%",
+              backgroundPosition: "center",
+              // backgroundRepeat: "no-repeat"
+            }}
+          ></div>
+          <div
+            className="absolute inset-0 z-1"
+            style={{
+              backgroundImage: "url('/noisy-background.svg')",
+              backgroundSize: "auto 100%",
+              backgroundPosition: "center",
+              mixBlendMode: "multiply",
+              WebkitMaskImage: "url('/background.svg')",
+              maskImage: "url('/background.svg')",
+              WebkitMaskSize: "auto 100%",
+              maskSize: "auto 100%",
+              WebkitMaskPosition: "center",
+              maskPosition: "center"
+            }}
+          ></div>
+
+          <div className="flex z-2 mt-[8vh]">
+            <Image
+              src="/prithvi25.svg"
+              alt="prithvi'25"
+              width={200}
+              height={200}
+              className="w-[80%] sm:w-2/3 md:w-1/2 lg:w-[267px] h-auto"
+            />
+          </div>
+          <div className="flex z-2 flex-wrap justify-center gap-4 sm:gap-8 md:gap-[78px] mt-7 text-lg sm:text-xl md:text-2xl md:text-[1.4rem] lg:text-[24px] text-center">
+            <Link href="/Home" className="!text-black">Home</Link>
+            <Link href="/Lectures" className="!text-black">Lectures</Link>
+            <Link href="/Workshops" className="!text-black">Workshops</Link>
+            <Link href="/Competitions" className="!text-black">Competitions</Link>
+            <Link href="/Sponsors" className="!text-black">Sponsors</Link>
+          </div>
+          <div className="flex flex-wrap z-2 justify-center gap-8 sm:gap-12 md:gap-[78px] mt-4 text-lg sm:text-xl md:text-2xl lg:text-[24px] text-center">
+            <Link href="/Our Team" className="!text-black">Our Team</Link>
+            <Link href="/Contact Us" className="!text-black">Contact Us</Link>
+            <Link href="/FAQ" className="!text-black">FAQ</Link>
+          </div>
+          <div className="flex flex-col md:flex-row z-2 gap-6 md:gap-[60px] items-center text-black mt-[30px]">
+            <p className="text-[28px] md:text-[32px] leading-tight text-center md:text-left">
+              Our Social  Handles
+            </p>
+            <div className="mt-4 flex gap-6 md:gap-[60px] items-center text-black justify-center">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <FaInstagram className="h-[35px] w-[35px] text-black hover:text-white" />
+              </a>
+              <a href="mailto:your-email@example.com">
+                <FaEnvelope className="h-[35px] w-[35px] text-black hover:text-white" />
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook className="h-[35px] w-[35px] text-black hover:text-white" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="h-[35px] w-[35px] text-black hover:text-white" />
+              </a>
+            </div>
+          </div>
+          <div className="text-black mt-[40px] z-2 mb-[40px] text-[18px] md:text-[20px] text-center">
+            <p>CIVIL ENGINEERING ASSOCIATION, CED, NIT CALICUT</p>
+          </div>
+        </div>
+      
+        
       </div>
     </>
   );

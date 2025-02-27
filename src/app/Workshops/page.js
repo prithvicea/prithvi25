@@ -47,6 +47,7 @@ const Workshops = () => {
             ))}
         </div>
       </div>
+      
 
     </>
   )

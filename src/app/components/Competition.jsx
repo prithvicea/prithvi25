@@ -5,7 +5,7 @@ const Competition = () => {
   return (
     <>
       <div
-        className="container absolute top-[330vh] h-[200vh] w-screen bg-[#23A323] bg-blend-soft-light bg-center bg-no-repeat bg-cover z-1 p-8 flex flex-col justify-center items-center gap-8"
+        className="absolute top-[360vh] md:top-[330vh] h-[200vh] w-full bg-[#23A323] bg-blend-soft-light bg-center bg-no-repeat bg-cover z-1 p-8 flex flex-col justify-center items-center gap-8"
         style={{
           backgroundImage: "url('./noisy-background.svg')",
         }}
@@ -65,13 +65,13 @@ const Competition = () => {
       {/* Mobile-specific styles */}
       <style jsx>{`
         @media (max-width: 768px) {
-          .container{
-          top:310vh;
-          height: 300vh;
+          .container {
+            top: 310vh;
+            height: 300vh;
           }
           .competition-card {
-            width: 200px; /* Reduce width for mobile */
-            height: 280px; /* Reduce height for mobile */
+            width: 150px; /* Reduced width for mobile */
+            height: 220px; /* Reduced height for mobile */
           }
           .flex-col {
             gap: 1rem; /* Reduce gap between cards for mobile */
