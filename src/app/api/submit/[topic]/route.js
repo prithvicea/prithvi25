@@ -1,10 +1,6 @@
 import { NextResponse } from "next/server";
 import { google } from "googleapis";
-import { writeFile } from "fs/promises";
-import { join } from "path";
-import { mkdir } from "fs/promises";
-import fs from "fs";
-import path from "path";
+import { uploadImageToCloudinary } from "@/lib/cloudinary";
 
 export const config = {
   api: {
@@ -14,7 +10,7 @@ export const config = {
 
 export async function POST(request, { params }) {
   try {
-    const { topic } =params;
+    const { topic } = params;
 
     if (!topic) {
       return NextResponse.json(
@@ -26,12 +22,9 @@ export async function POST(request, { params }) {
     let id;
     if (topic === "Lecture1") {
       id = process.env.GOOGLE_SHEET_ID;
-    }
-    
-    if (topic === "AutoCAD Design Competition") {
+    } else if (topic === "AutoCAD Design Competition") {
       id = process.env.WORKSHOP_SHEET_ID;
-    }
-    else {
+    } else {
       id = process.env.GOOGLE_SHEET_ID2;
     }
 
@@ -51,38 +44,29 @@ export async function POST(request, { params }) {
       );
     }
 
+    const submissionDate = new Date().toLocaleString();
+    const bytes = await paymentProof.arrayBuffer();
+    const buffer = Buffer.from(bytes);
+
+    
+    const imageUrl = await uploadImageToCloudinary(buffer, paymentProof.name);
+    console.log("Image uploaded to Cloudinary:", imageUrl);
+
+   
     const auth = new google.auth.GoogleAuth({
       credentials: {
         client_email: process.env.GOOGLE_CLIENT_EMAIL,
         private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
       },
       scopes: [
-        "https://www.googleapis.com/auth/drive",
-        "https://www.googleapis.com/auth/drive.file",
         "https://www.googleapis.com/auth/spreadsheets",
       ],
     });
 
-    const bytes = await paymentProof.arrayBuffer();
-    const buffer = Buffer.from(bytes);
-    const uploadDir = path.join(process.cwd(), "uploads");
-    try {
-      await mkdir(uploadDir, { recursive: true });
-    } catch (error) {
-      console.error("Error creating directory:", error);
-    }
-
-    const filePath = path.join(uploadDir, paymentProof.name);
-    await writeFile(filePath, buffer);
-
-    const imageUrl = await uploadImageToDrive(auth, filePath, paymentProof.name);
-
-    fs.unlinkSync(filePath);
-
     const sheets = google.sheets({ auth, version: "v4" });
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: id,
-      range: "A1:G1",
+      range: "A1:H1",
       valueInputOption: "USER_ENTERED",
       requestBody: {
         values: [
@@ -94,6 +78,7 @@ export async function POST(request, { params }) {
             instituteId,
             instituteName,
             imageUrl,
+            submissionDate,
           ],
         ],
       },
@@ -105,43 +90,10 @@ export async function POST(request, { params }) {
       data: response.data,
     });
   } catch (error) {
-    console.error("Google Sheets Error:", error);
+    console.error("Error in POST function:", error);
     return NextResponse.json(
       { status: 500, success: false, message: "Something went wrong" },
       { status: 500 }
     );
-  }
-}
-
-async function uploadImageToDrive(auth, filePath, fileName) {
-  const drive = google.drive({ version: "v3", auth });
-
-  console.log("Drive Upload Path:", filePath);
-  console.log("Drive File Name:", fileName);
-  console.log("Drive Parent ID:", process.env.GOOGLE_DRIVE_ID);
-
-  const fileMetadata = { name: fileName, parents: [process.env.GOOGLE_DRIVE_ID] };
-  const media = {
-    mimeType: "image/jpeg",
-    body: fs.createReadStream(filePath),
-  };
-
-  try {
-    const file = await drive.files.create({
-      resource: fileMetadata,
-      media,
-      fields: "id",
-    });
-
-    await drive.permissions.create({
-      fileId: file.data.id,
-      requestBody: { role: "reader", type: "anyone" },
-    });
-
-    const fileUrl = `https://drive.google.com/uc?id=${file.data.id}`;
-    return fileUrl;
-  } catch (error) {
-    console.error("Drive upload error:", error);
-    throw error;
   }
 }

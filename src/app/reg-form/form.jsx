@@ -48,11 +48,11 @@ function FormFile({topic}) {
         return;
       }
   
-      if (!paymentStatus || !paymentProof) {
+      if (!paymentStatus) {
         alert("Please upload payment proof before submitting.");
         return;
       }
-  
+
       const formData = new FormData();
       formData.append("name", name);
       formData.append("email", email);
@@ -61,11 +61,11 @@ function FormFile({topic}) {
       formData.append("instituteId", instituteId);
       formData.append("instituteName", instituteName);
       formData.append("paymentProof", paymentProof);
-  
+
       const res = await axios.post(`/api/submit/${topic}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-  
+
       if (res.status === 200) {
         alert("Form submitted successfully!");
         setName("");
@@ -77,15 +77,17 @@ function FormFile({topic}) {
         setPaymentProof(null);
         setPaymentStatus(false);
         setShowImageUpload(false);
-        router.push("/Lecture");
+        router.push('/Lecture');
       } else {
         alert("Form submission failed.");
       }
+
+      
     } catch (error) {
-      console.error("Error while submitting the form", error);
+      console.log("Error while submitting the form")
+      
     }
   };
-  
 
   return (
     <div className="w-full flex justify-center">

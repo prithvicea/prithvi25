@@ -1,16 +1,13 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+import js from "@eslint/js";
+import next from "eslint-plugin-next";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-/** @type {import('eslint').Linter.FlatConfig[]} */
-const eslintConfig = [
+export default [
+  js.configs.recommended,
+  next.configs.recommended,
   {
-    extends: [
-      "next/core-web-vitals"
-    ]
-  }
+    rules: {
+      "no-console": "warn",
+      "no-unused-vars": "warn",
+    },
+  },
 ];
-
-export default eslintConfig;
